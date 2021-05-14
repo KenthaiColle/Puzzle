@@ -124,12 +124,11 @@ GameObject:
   - component: {fileID: 57909108}
   - component: {fileID: 57909107}
   - component: {fileID: 57909106}
-  - component: {fileID: 57909105}
   - component: {fileID: 57909104}
-  - component: {fileID: 57909110}
+  - component: {fileID: 57909105}
   m_Layer: 0
   m_Name: GreenButton
-  m_TagString: Untagged
+  m_TagString: SimonButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,10 +158,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 57909103}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55667e67f0d75a84bbfd30b1381a603c, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ca3cad73f640ad4db10be843c55d91b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 100
+  buttonColor: {r: 0.16470589, g: 1, b: 0.19215688, a: 0}
 --- !u!65 &57909106
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -235,18 +234,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &57909110
-MonoBehaviour:
+--- !u!1 &80973132
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 57909103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cc7a42b1784e124b9cac3ee7bab5118, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 80973133}
+  m_Layer: 0
+  m_Name: Controllers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &80973133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80973132}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.873, y: -0.321, z: -0.847}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 552004933}
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,6 +668,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c19bebafd517a594d8e10ede81dc28da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &552004932
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 552004933}
+  - component: {fileID: 552004934}
+  m_Layer: 0
+  m_Name: SimonController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &552004933
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552004932}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 80973133}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &552004934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552004932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9427a542c479f27438a516136897a16a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugMode: 0
 --- !u!1 &573310521
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,12 +997,11 @@ GameObject:
   - component: {fileID: 1192783971}
   - component: {fileID: 1192783970}
   - component: {fileID: 1192783969}
-  - component: {fileID: 1192783968}
   - component: {fileID: 1192783967}
-  - component: {fileID: 1192783973}
+  - component: {fileID: 1192783968}
   m_Layer: 0
   m_Name: BlueButton
-  m_TagString: Untagged
+  m_TagString: SimonButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -970,10 +1031,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1192783966}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55667e67f0d75a84bbfd30b1381a603c, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ca3cad73f640ad4db10be843c55d91b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 100
+  buttonColor: {r: 0.18039216, g: 0.28627452, b: 1, a: 0}
 --- !u!65 &1192783969
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1046,18 +1107,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1192783973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192783966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cc7a42b1784e124b9cac3ee7bab5118, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1308227827
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,12 +1210,11 @@ GameObject:
   - component: {fileID: 1323141048}
   - component: {fileID: 1323141047}
   - component: {fileID: 1323141046}
-  - component: {fileID: 1323141045}
   - component: {fileID: 1323141044}
-  - component: {fileID: 1323141050}
+  - component: {fileID: 1323141045}
   m_Layer: 0
   m_Name: YellowButton
-  m_TagString: Untagged
+  m_TagString: SimonButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1196,10 +1244,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1323141043}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55667e67f0d75a84bbfd30b1381a603c, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ca3cad73f640ad4db10be843c55d91b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 100
+  buttonColor: {r: 0.9686275, g: 1, b: 0.16862746, a: 0}
 --- !u!65 &1323141046
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1272,18 +1320,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1323141050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1323141043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cc7a42b1784e124b9cac3ee7bab5118, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1397883242
 GameObject:
   m_ObjectHideFlags: 0
@@ -1387,12 +1423,11 @@ GameObject:
   - component: {fileID: 1401881362}
   - component: {fileID: 1401881361}
   - component: {fileID: 1401881360}
-  - component: {fileID: 1401881359}
   - component: {fileID: 1401881358}
-  - component: {fileID: 1401881364}
+  - component: {fileID: 1401881359}
   m_Layer: 0
   m_Name: RedButton
-  m_TagString: Untagged
+  m_TagString: SimonButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1422,10 +1457,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1401881357}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55667e67f0d75a84bbfd30b1381a603c, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ca3cad73f640ad4db10be843c55d91b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 100
+  buttonColor: {r: 0.9803922, g: 0.18039216, b: 0.18431373, a: 0}
 --- !u!65 &1401881360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1498,18 +1533,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1401881364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1401881357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cc7a42b1784e124b9cac3ee7bab5118, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1578128326
 GameObject:
   m_ObjectHideFlags: 0

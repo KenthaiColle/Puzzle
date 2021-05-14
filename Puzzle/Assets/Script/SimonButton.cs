@@ -4,38 +4,36 @@ using UnityEngine;
 
 public class SimonButton : MonoBehaviour
 {
-    Camera cam; //ref to main camera
-    Ray ray; //ref to our fire button
+    [SerializeField] //make it visible in the editor
+    Color buttonColor;
+
+    Material material;
     // Start is called before the first frame update
     void Start()
     {
-        cam = Camera.main; // unity gives the current camera
+        material = GetComponent<Renderer>().material; //get material component
+        material.color = buttonColor; // set buttonColor to the obj current material color
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Fire1"))
-        {
-            Debug.Log("Someone pressed the fire button");
-            ray = cam.ScreenPointToRay(Input.mousePosition);
-
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit)) //out just allow raycast to return data imidiately instead of having return in an other class
-            {
-                Debug.Log("we hit an object! " + hit.transform.gameObject.name);
-                StartCoroutine(ChangeObjColor(hit.transform.GetComponent<Renderer>().material));
-            }
-        }
+        
     }
 
-    private IEnumerator ChangeObjColor(Material material)
+    Coroutine coroutine; //create coroutine variable
+    internal void Activate()
     {
-        Color originalColor = material.color;
-
+        if (coroutine != null) // stop coroutine if there's already one running to prevent lots running at the same time
+        {
+            StopCoroutine(coroutine);
+        }
+        coroutine = StartCoroutine(ChangeObjColor(GetComponent<Renderer>().material)); //set corotine to ChangeObjColor
+    }
+    private IEnumerator ChangeObjColor(Material material) //Change colour material to black after 1 sec.
+    {
         material.color = Color.black;
         yield return new WaitForSeconds(1f);
-
-        material.color = originalColor;
+        material.color = buttonColor;
     }
 }
