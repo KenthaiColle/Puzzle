@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-
+    Camera cam;
     CodeLock codeLock;
 
     int reachRange = 100;

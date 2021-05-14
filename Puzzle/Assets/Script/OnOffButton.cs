@@ -23,7 +23,7 @@ public class OnOffButton : MonoBehaviour
             {
                 if (hit.transform.name == button.name)
                 {
-                    Debug.Log("This is a Player");
+                    Debug.Log("This is a Button");
                     on = true;
                     var cubeRenderer = button.GetComponent<Renderer>();
                     cubeRenderer.material.SetColor("_Color", Color.green);
@@ -31,7 +31,7 @@ public class OnOffButton : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("This isn't a Player");
+                    Debug.Log("This isn't a Button");
                 }
             }
             
@@ -52,7 +52,7 @@ public class OnOffButton : MonoBehaviour
             }
             else
             {
-                Debug.Log("This isn't a Player");
+                Debug.Log("This isn't a Button");
             }
 
         }
