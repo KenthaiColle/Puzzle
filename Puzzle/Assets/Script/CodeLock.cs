@@ -36,6 +36,9 @@ public class CodeLock : MonoBehaviour
     {
         var cubeRenderer = lightBulb.GetComponent<Renderer>();
         cubeRenderer.material.SetColor("_Color", Color.green);
+
+        var lightOn = lightBulb.GetComponent<CorrectLightBulb>();
+        lightOn.turnOn();
     }
 
     public void SetValue(string value)
