@@ -9,14 +9,20 @@ public class Port : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //Upgrade to 2020
-        if (other.gameObject.TryGetComponent())
+        //Checks if the game object has MovablePair or not, if yes then it calls PairObjectInteraction.
+        if (other.gameObject.TryGetComponent(out MovablePair CollideMovable))
+        {
+            _ownMatchEntity.PairObjectInteraction(true, CollideMovable);
+        }
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerExit(Collider other)
     {
-        
+        //Opposite happens here
+        if (other.gameObject.TryGetComponent(out MovablePair CollideMovable))
+        {
+            _ownMatchEntity.PairObjectInteraction(false, CollideMovable);
+        }
     }
 
     // Update is called once per frame
