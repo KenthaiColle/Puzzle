@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MatchEntity : MonoBehaviour
 {
     public MatchFeedback _feedback;
     public MovablePair _movablePair;
     public Renderer _fixedPairRenderer;
-    public MatchSystemController _matchSystemController;
+    public MatchEntityManager _matchSystemController;
 
     private bool _matched;
 

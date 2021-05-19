@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using System;
 using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -52,7 +53,7 @@ public class MatchEntityManager : MonoBehaviour
         //Inform the matchEntities of the new position
         for(int i = 0; i < _matchEntities.Count; i++)
         {
-            _matchEntities[i].SetMovablePairPosition(movablePairPosition[i]);
+            _matchEntities[i].SetMovablePairPosition(movablePairPositions[i]);
         }
     }
 
