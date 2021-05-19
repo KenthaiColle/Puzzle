@@ -21,7 +21,7 @@ public class MatchEntityManager : MonoBehaviour
 
     void Start()
     {
-        _matchEntities = transform.GetComponentInChildren<MatchEntity>().ToList();//Get component from the child object.
+        //_matchEntities = transform.GetComponentInChildren<MatchEntity>().ToList();//Get component from the child object.
         _targetMatchCount = _matchEntities.Count;
         SetEntityColors();
         RandomizeMovablePairPlacement();
