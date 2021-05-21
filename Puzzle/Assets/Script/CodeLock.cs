@@ -13,6 +13,7 @@ public class CodeLock : MonoBehaviour
 
     //for placing green/red light object.
     public Transform lightBulb;
+    public CorrectLightBulb _light;
 
     private void Start()
     {
@@ -37,8 +38,8 @@ public class CodeLock : MonoBehaviour
         var cubeRenderer = lightBulb.GetComponent<Renderer>();
         cubeRenderer.material.SetColor("_Color", Color.green);
 
-        var lightOn = lightBulb.GetComponent<CorrectLightBulb>();
-        lightOn.turnOn();
+        //Set the light on to true for win condition
+        _light.turnOn();
     }
 
     public void SetValue(string value)
