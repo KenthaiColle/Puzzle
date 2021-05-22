@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class MatchObject : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public OnOffButton _button1;
+    public Transform lightBulb;
+    public CorrectLightBulb _light;
 
-    // Update is called once per frame
-    void Update()
+    public void CheckAllButtons()
     {
-        
+        if (_button1.on == true)
+        {
+            var cubeRenderer = lightBulb.GetComponent<Renderer>();
+            cubeRenderer.material.SetColor("_Color", Color.green);
+
+            //Set the light on to true for win condition
+            _light.turnOn();
+        }
     }
 }
