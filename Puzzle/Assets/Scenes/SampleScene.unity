@@ -528,6 +528,7 @@ MonoBehaviour:
   selfMatchObj: {fileID: 125780658}
   selfTransform: {fileID: 125780659}
   _matchSystemController: {fileID: 1850915144}
+  originalMaterial: {fileID: 2100000, guid: 142528feb17eb0f4f8d68ab3b7358427, type: 2}
 --- !u!4 &125780659
 Transform:
   m_ObjectHideFlags: 0
@@ -641,6 +642,7 @@ MonoBehaviour:
   selfMatchObj: {fileID: 136987123}
   selfTransform: {fileID: 136987124}
   _matchSystemController: {fileID: 1850915144}
+  originalMaterial: {fileID: 2100000, guid: 030453656e801f3419b954115f265903, type: 2}
 --- !u!4 &136987124
 Transform:
   m_ObjectHideFlags: 0
@@ -860,6 +862,7 @@ MonoBehaviour:
   selfMatchObj: {fileID: 213476265}
   selfTransform: {fileID: 213476264}
   _matchSystemController: {fileID: 1850915144}
+  originalMaterial: {fileID: 2100000, guid: 142528feb17eb0f4f8d68ab3b7358427, type: 2}
 --- !u!65 &213476266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1829,6 +1832,7 @@ MonoBehaviour:
   selfMatchObj: {fileID: 692255148}
   selfTransform: {fileID: 692255147}
   _matchSystemController: {fileID: 1850915144}
+  originalMaterial: {fileID: 2100000, guid: 030453656e801f3419b954115f265903, type: 2}
 --- !u!65 &692255149
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2004,6 +2008,7 @@ MonoBehaviour:
   selfMatchObj: {fileID: 698815930}
   selfTransform: {fileID: 698815926}
   _matchSystemController: {fileID: 1850915144}
+  originalMaterial: {fileID: 2100000, guid: c86fd1cd48b2ad1468d83d7cd3732d0d, type: 2}
 --- !u!1 &708660218
 GameObject:
   m_ObjectHideFlags: 0
@@ -2181,6 +2186,7 @@ MonoBehaviour:
   selfMatchObj: {fileID: 917321603}
   selfTransform: {fileID: 917321602}
   _matchSystemController: {fileID: 1850915144}
+  originalMaterial: {fileID: 2100000, guid: 7ee01405762f4174cbbb32d38be6bad0, type: 2}
 --- !u!65 &917321604
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2242,6 +2248,115 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 917321601}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &919578569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 919578570}
+  - component: {fileID: 919578574}
+  - component: {fileID: 919578573}
+  - component: {fileID: 919578572}
+  - component: {fileID: 919578571}
+  m_Layer: 0
+  m_Name: LightBulb_Match
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &919578570
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919578569}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.429148, y: 4.4626946, z: -5.94052}
+  m_LocalScale: {x: 0.28539905, y: 0.28539905, z: 0.28539905}
+  m_Children: []
+  m_Father: {fileID: 1850915145}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &919578571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919578569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ba780973389ebc4ba6d4952d1aa3ffa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  on: 0
+--- !u!65 &919578572
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919578569}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &919578573
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919578569}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &919578574
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919578569}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &943009189
 GameObject:
@@ -2754,6 +2869,7 @@ MonoBehaviour:
   selfMatchObj: {fileID: 1262041638}
   selfTransform: {fileID: 1262041639}
   _matchSystemController: {fileID: 1850915144}
+  originalMaterial: {fileID: 2100000, guid: 7ee01405762f4174cbbb32d38be6bad0, type: 2}
 --- !u!4 &1262041639
 Transform:
   m_ObjectHideFlags: 0
@@ -4010,14 +4126,19 @@ MonoBehaviour:
   rightfull: 0
   correctMatches: 4
   attemptedMatches: 0
+  totalMatches: 0
   _Right1: {fileID: 698815930}
   _Right2: {fileID: 1262041638}
   _Right3: {fileID: 125780658}
   _Right4: {fileID: 136987123}
-  _Left1: {fileID: 0}
-  _Left2: {fileID: 0}
-  _Left3: {fileID: 0}
-  _Left4: {fileID: 0}
+  _Left1: {fileID: 2025472955}
+  _Left2: {fileID: 917321603}
+  _Left3: {fileID: 213476265}
+  _Left4: {fileID: 692255148}
+  lightBulb: {fileID: 919578570}
+  _light: {fileID: 919578571}
+  fail: {fileID: 0}
+  success: {fileID: 0}
 --- !u!4 &1850915145
 Transform:
   m_ObjectHideFlags: 0
@@ -4037,6 +4158,7 @@ Transform:
   - {fileID: 917321602}
   - {fileID: 213476264}
   - {fileID: 692255147}
+  - {fileID: 919578570}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4570,6 +4692,7 @@ MonoBehaviour:
   selfMatchObj: {fileID: 2025472955}
   selfTransform: {fileID: 2025472954}
   _matchSystemController: {fileID: 1850915144}
+  originalMaterial: {fileID: 2100000, guid: c86fd1cd48b2ad1468d83d7cd3732d0d, type: 2}
 --- !u!65 &2025472956
 BoxCollider:
   m_ObjectHideFlags: 0

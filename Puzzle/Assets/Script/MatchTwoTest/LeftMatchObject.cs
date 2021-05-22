@@ -10,6 +10,7 @@ public class LeftMatchObject : MonoBehaviour
     public LeftMatchObject selfMatchObj; //reference to script
     public Transform selfTransform; //referenece to self's transform
     public MatchSystemController _matchSystemController; // reference to controller
+    public Material originalMaterial;
 
     public void OnMouseDown()
     {
@@ -27,9 +28,10 @@ public class LeftMatchObject : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ResetColour()
     {
-        
+        var selfRenderer = selfTransform.GetComponent<Renderer>();
+        selfRenderer.material = originalMaterial;
     }
+
 }
