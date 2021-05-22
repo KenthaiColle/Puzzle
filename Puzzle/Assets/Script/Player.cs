@@ -50,6 +50,20 @@ public class Player : MonoBehaviour
 
                     }
                 }
+                //if(simonButton == null)
+                //{
+                //    LeftMatchObject leftObj = hit.transform.gameObject.GetComponent<LeftMatchObject>();
+                //    RightMatchObject rightObj = hit.transform.gameObject.GetComponent<RightMatchObject>();
+                //    if (hit.transform.tag.Equals("RightButton"))
+                //    {
+                //        rightObj.Select();
+                //    }
+                //    if (hit.transform.tag.Equals("LeftButton"))
+                //    {
+                //        leftObj.Select();
+                //    }
+
+                //}
             }
             
 

@@ -12,18 +12,21 @@ public class RightMatchObject : MonoBehaviour
     public MatchSystemController _matchSystemController; // reference to controller
 
 
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
+        Debug.Log("Hello " + _matchSystemController.rightfull);
         if (_matchSystemController.rightfull == false && finishedMatching == false)
         {
             //Change colour to black to indicate matched
             var selfRenderer = selfTransform.GetComponent<Renderer>();
             selfRenderer.material.SetColor("_Color", Color.black);
+            Debug.Log("Changed to Black");
 
+            _matchSystemController._currentRight = selfMatchObj;
             _matchSystemController.rightfull = true;
             finishedMatching = true;
             //Give the controller reference to this obj
-            _matchSystemController._currentRight = selfMatchObj;
+            
         }
            
     }

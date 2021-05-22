@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - SimonButton
+  - RightButton
+  - LeftButton
   layers:
   - Default
   - TransparentFX

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class MatchSystemController : MonoBehaviour
 {
-    public RightMatchObject _currentRight; //current selected right
-    public LeftMatchObject _currentLeft; //current selected left
+    public RightMatchObject _currentRight = null; //current selected right
+    public LeftMatchObject _currentLeft = null; //current selected left
     public bool leftfull = false; //If left is clicked then you can't click another left object
-    public bool rightfull = true; //If right is clicked then you can't click another right object
+    public bool rightfull = false; //If right is clicked then you can't click another right object
     // Start is called before the first frame update
 
     public int correctMatches = 4;
@@ -63,5 +63,12 @@ public class MatchSystemController : MonoBehaviour
     {
         _currentLeft = null;
         _currentRight = null;
+        leftfull = false;
+        rightfull = false;
+    }
+
+    private void Start()
+    {
+        Debug.Log(rightfull);
     }
 }

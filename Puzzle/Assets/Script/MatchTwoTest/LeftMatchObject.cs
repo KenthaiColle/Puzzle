@@ -11,7 +11,7 @@ public class LeftMatchObject : MonoBehaviour
     public Transform selfTransform; //referenece to self's transform
     public MatchSystemController _matchSystemController; // reference to controller
 
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
         if (_matchSystemController.leftfull == false && finishedMatching == false)
         {
