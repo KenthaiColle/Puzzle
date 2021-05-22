@@ -13,5 +13,6 @@ public class CorrectLightBulb : MonoBehaviour
     public void turnOn()
     {
         on = true;
+        Debug.Log("The thing has turn on");
     }
 }

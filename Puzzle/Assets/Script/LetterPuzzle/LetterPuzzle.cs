@@ -23,33 +23,33 @@ public class LetterPuzzle : MonoBehaviour
         {
             //Make this A
             self.material = _A;
-            Debug.Log(currentLetter);
+            //Debug.Log(currentLetter);
         }
         if (currentLetter == 1)
         {
             //Make this B
             self.material = _B;
-            Debug.Log(currentLetter);
+            //Debug.Log(currentLetter);
         }
         if (currentLetter == 2)
         {
             //Make this C
-            Debug.Log(currentLetter);
+            //Debug.Log(currentLetter);
         }
         if (currentLetter == 3)
         {
             //Make this D
-            Debug.Log(currentLetter);
+           // Debug.Log(currentLetter);
         }
         if (currentLetter == 4)
         {
             //Make this E
-            Debug.Log(currentLetter);
+           // Debug.Log(currentLetter);
         }
         if (currentLetter == 5)
         {
             //Make this F
-            Debug.Log(currentLetter);
+           // Debug.Log(currentLetter);
         }
     }
 
