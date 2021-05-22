@@ -50,7 +50,7 @@ public class MatchSystemController : MonoBehaviour
     }
     void CheckAndReset()
     {
-        Reset();
+        ResetValues();
         CheckMatchCount();
     }
 
@@ -68,8 +68,10 @@ public class MatchSystemController : MonoBehaviour
         }
         else if (totalMatches == correctMatches)
         {
-            Reset();
+            ResetValues();
             ResetAllMatchObj();
+            attemptedMatches = 0;
+            totalMatches = 0;
             Debug.Log("You Lost!");
         }
     }
@@ -105,7 +107,7 @@ public class MatchSystemController : MonoBehaviour
         }
         
     }
-    public void Reset()
+    public void ResetValues()
     {
         _currentLeft = null;
         _currentRight = null;
