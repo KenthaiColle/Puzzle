@@ -10,5 +10,6 @@ public class DownButton : MonoBehaviour
     void OnMouseDown()
     {
         _letterPuzzle.updateCurrentLetterDown();
+        Debug.Log("Update Down");
     }
 }
