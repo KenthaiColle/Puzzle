@@ -64,6 +64,7 @@ public class MatchSystemController : MonoBehaviour
 
             //Set the light on to true for win condition
             _light.turnOn();
+            success.Play();
             //Debug.Log("You Won!");
         }
         else if (totalMatches == correctMatches)
@@ -72,7 +73,8 @@ public class MatchSystemController : MonoBehaviour
             ResetAllMatchObj();
             attemptedMatches = 0;
             totalMatches = 0;
-            Debug.Log("You Lost!");
+            //Debug.Log("You Lost!");
+            fail.Play();
         }
     }
 

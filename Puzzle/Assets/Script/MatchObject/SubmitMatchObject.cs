@@ -8,7 +8,7 @@ public class SubmitMatchObject : MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log("Work");
+        //Debug.Log("Work");
         _matchObject.CheckAllButtons();
     }
 }

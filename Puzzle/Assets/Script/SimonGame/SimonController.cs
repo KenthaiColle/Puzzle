@@ -10,10 +10,11 @@ public class SimonController : MonoBehaviour
     [SerializeField]
     Player player; //ref to player
     [SerializeField]
-    List<SimonButton> button = new List<SimonButton>();
-
-    AudioSource fail;
-    AudioSource success;
+    List<SimonButton> button = new List<SimonButton>(); //Make a list of simon buttons
+    
+    //ref to fail and success sound
+    public AudioSource fail;
+    public AudioSource success;
 
 
     bool turnTaken = false; //If simon has taken turn or not
@@ -22,6 +23,7 @@ public class SimonController : MonoBehaviour
 
     public int numberOfPresses = 2;
 
+    //Bool for game start or finish, essential for the abilty to start and stop game
     public bool gameStart = false;
     public bool gameFinished = false;
 
@@ -33,10 +35,6 @@ public class SimonController : MonoBehaviour
     public Transform lightBulb;
     public CorrectLightBulb _light;
 
-    void Awake()
-    {
-        fail = GetComponent<AudioSource>();
-    }
 
     // Start is called before the first frame update
     void Start()
@@ -132,6 +130,7 @@ public class SimonController : MonoBehaviour
 
             //Set the light on to true for win condition
             _light.turnOn();
+            success.Play();
             gameStart = false;
             gameFinished = true;
             totalTurn = 0;
