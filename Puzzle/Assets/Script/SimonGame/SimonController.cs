@@ -13,6 +13,8 @@ public class SimonController : MonoBehaviour
     List<SimonButton> button = new List<SimonButton>();
 
     AudioSource fail;
+    AudioSource success;
+
 
     bool turnTaken = false; //If simon has taken turn or not
 
@@ -21,6 +23,15 @@ public class SimonController : MonoBehaviour
     public int numberOfPresses = 2;
 
     public bool gameStart = false;
+    public bool gameFinished = false;
+
+    public int totalTurn = 0; //Counts turn
+    public int turnGoal = 4;//Turn goal to reach
+    
+
+    //light bulb ref
+    public Transform lightBulb;
+    public CorrectLightBulb _light;
 
     void Awake()
     {
@@ -34,15 +45,16 @@ public class SimonController : MonoBehaviour
         {
             b.buttonPressed += HandleButtonPressed;
         }
-        simonPlayer.TakeTurn(numberOfPresses); //Call simon to take the turn
-        turnTaken = true;
+        //simonPlayer.TakeTurn(numberOfPresses); //Call simon to take the turn
+        //turnTaken = true;
     }
 
 
     int playerButtonPress = 0;
     private void HandleButtonPressed(SimonButton obj)
     {
-        if(gameStart == true)
+        
+        if (gameStart == true && totalTurn < turnGoal && gameFinished == false)
         {
             Debug.Log("SimonGame here, a button was pressed: " + obj.name);
 
@@ -57,6 +69,7 @@ public class SimonController : MonoBehaviour
                 {
                     Debug.Log("Great job, you successfully repeated simon's pattern");
                     numberOfPresses++;
+                    totalTurn++;
                     player.isOurTurn = false; //To stop from player clicking again before simon has a turn
                     Invoke("SwitchTurnToSimon", 1f); //Call a new method afer a certain amount of time
                     return;
@@ -72,6 +85,7 @@ public class SimonController : MonoBehaviour
                     Debug.Log("You hit the wrong button, game over!");
                     fail.Play();
                     numberOfPresses = 2;
+                    totalTurn = 0;
                     player.isOurTurn = false; // to prevent the player from being able to click right away
                     Invoke("StopPlayingAudio", 1.3f);
                     Invoke("SwitchTurnToSimon", 1.5f);
@@ -81,6 +95,7 @@ public class SimonController : MonoBehaviour
                 playerButtonPress++;
             }
         }
+        
         else
         {
             return;
@@ -109,7 +124,19 @@ public class SimonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameStart == true)
+        if (totalTurn == turnGoal)
+        {
+            //turn light on
+            var cubeRenderer = lightBulb.GetComponent<Renderer>();
+            cubeRenderer.material.SetColor("_Color", Color.green);
+
+            //Set the light on to true for win condition
+            _light.turnOn();
+            gameStart = false;
+            gameFinished = true;
+            totalTurn = 0;
+        }
+        if (gameStart == true && gameFinished == false)
         {
             //Simon's turn if turn is not taken and turn == 0
             if (turn == 0 && !turnTaken)

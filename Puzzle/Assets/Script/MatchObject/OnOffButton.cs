@@ -44,11 +44,11 @@ public class OnOffButton : MonoBehaviour
             {
 
             }
-                if (hit.transform.name == button.name)
-                {
-                on = false;
-                var cubeRenderer = button.GetComponent<Renderer>();
-                cubeRenderer.material.SetColor("_Color", Color.red);
+            if (hit.transform.name == button.name)
+            {
+            on = false;
+            var cubeRenderer = button.GetComponent<Renderer>();
+            cubeRenderer.material.SetColor("_Color", Color.red);
             }
             else
             {
