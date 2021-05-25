@@ -18,11 +18,15 @@ public class MatchSystemController : MonoBehaviour
     public RightMatchObject _Right2;
     public RightMatchObject _Right3;
     public RightMatchObject _Right4;
+    public RightMatchObject _Right5;
+    public RightMatchObject _Right6;
     //all left matching object
     public LeftMatchObject _Left1;
     public LeftMatchObject _Left2;
     public LeftMatchObject _Left3;
     public LeftMatchObject _Left4;
+    public LeftMatchObject _Left5;
+    public LeftMatchObject _Left6;
     //Lightbulb to show success
     public Transform lightBulb;
     public CorrectLightBulb _light;
@@ -89,6 +93,10 @@ public class MatchSystemController : MonoBehaviour
         _Right3.ResetColour();
         _Right4.finishedMatching = false;
         _Right4.ResetColour();
+        _Right5.finishedMatching = false;
+        _Right5.ResetColour();
+        _Right6.finishedMatching = false;
+        _Right6.ResetColour();
         //reset Left Obj
         _Left1.finishedMatching = false;
         _Left1.ResetColour();
@@ -98,6 +106,10 @@ public class MatchSystemController : MonoBehaviour
         _Left3.ResetColour();
         _Left4.finishedMatching = false;
         _Left4.ResetColour();
+        _Left5.finishedMatching = false;
+        _Left5.ResetColour();
+        _Left6.finishedMatching = false;
+        _Left6.ResetColour();
     }
 
     // Update is called once per frame

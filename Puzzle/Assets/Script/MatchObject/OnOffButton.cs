@@ -9,7 +9,8 @@ public class OnOffButton : MonoBehaviour
     public bool on = false;
     public bool mustBeOn = false;
 
- 
+    public Material Green;
+    public Material Red;
 
     // Update is called once per frame
     void Update()
@@ -26,7 +27,7 @@ public class OnOffButton : MonoBehaviour
                     //Debug.Log("This is a Button");
                     on = true;
                     var cubeRenderer = button.GetComponent<Renderer>();
-                    cubeRenderer.material.SetColor("_Color", Color.green);
+                    cubeRenderer.material = Green;
                     Console.WriteLine("Done");
                 }
                 else
@@ -48,7 +49,7 @@ public class OnOffButton : MonoBehaviour
             {
             on = false;
             var cubeRenderer = button.GetComponent<Renderer>();
-            cubeRenderer.material.SetColor("_Color", Color.red);
+            cubeRenderer.material = Red;
             }
             else
             {
@@ -63,12 +64,12 @@ public class OnOffButton : MonoBehaviour
         if(on == false)
         {
             var cubeRenderer = button.GetComponent<Renderer>();
-            cubeRenderer.material.SetColor("_Color", Color.red);
+            cubeRenderer.material = Red;
         }
         else if (on == true)
         {
             var cubeRenderer = button.GetComponent<Renderer>();
-            cubeRenderer.material.SetColor("_Color", Color.green);
+            cubeRenderer.material = Green;
         }
     }
 }

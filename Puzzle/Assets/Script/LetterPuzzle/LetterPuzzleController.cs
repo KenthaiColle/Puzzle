@@ -15,8 +15,7 @@ public class LetterPuzzleController : MonoBehaviour
     private LetterPuzzle _letter4;
     [SerializeField]
     private LetterPuzzle _letter5;
-    [SerializeField]
-    private LetterPuzzle _letter6;
+
     //ref to light
     [SerializeField]
     private CorrectLightBulb _lightBulb;
@@ -28,8 +27,8 @@ public class LetterPuzzleController : MonoBehaviour
     // Update is called once per frame
     public void CheckAnswer()
     {
-        // && _letter2.currentLetter == 1 && _letter3.currentLetter == 2 && _letter4.currentLetter == 3 && _letter5.currentLetter == 4 && _letter6.currentLetter == 5
-        if (_letter1.currentLetter == 0)
+        // 
+        if (_letter1.currentLetter == 2 && _letter2.currentLetter == 2 && _letter3.currentLetter == 1 && _letter4.currentLetter == 0 && _letter5.currentLetter == 1)
         {
             var cubeRenderer = lightBulb.GetComponent<Renderer>();
             cubeRenderer.material.SetColor("_Color", Color.green);

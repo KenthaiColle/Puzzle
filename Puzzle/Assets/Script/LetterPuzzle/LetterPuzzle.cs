@@ -6,50 +6,57 @@ public class LetterPuzzle : MonoBehaviour
 {
     // Start is called before the first frame update
 
+
     public int currentLetter = 0;
-    public Material _A;
-    public Material _B;
-    public Material _C;
-    public Material _D;
-    public Material _E;
-    public Material _F;
+
+    public GameObject LetterObj;
+    public string _letter1;
+    public string _letter2;
+    public string _letter3;
+    public string _letter4;
+    public string _letter5;
+    public string _letter6;
 
     public Renderer self;
 
     // Update is called once per frame
     void Update()
     {
-        if(currentLetter == 0)
+        if (currentLetter == 0)
         {
-            //Make this A
-            self.material = _A;
+            //Make this letter 1
+            LetterObj.GetComponent<TMPro.TextMeshPro>().text = _letter1;
             //Debug.Log(currentLetter);
         }
         if (currentLetter == 1)
         {
-            //Make this B
-            self.material = _B;
+            //Make this letter 2
+            LetterObj.GetComponent<TMPro.TextMeshPro>().text = _letter2;
             //Debug.Log(currentLetter);
         }
         if (currentLetter == 2)
         {
-            //Make this C
+            //Make this letter 3
+            LetterObj.GetComponent<TMPro.TextMeshPro>().text = _letter3;
             //Debug.Log(currentLetter);
         }
         if (currentLetter == 3)
         {
-            //Make this D
-           // Debug.Log(currentLetter);
+            //Make this letter 4
+            LetterObj.GetComponent<TMPro.TextMeshPro>().text = _letter4;
+            // Debug.Log(currentLetter);
         }
         if (currentLetter == 4)
         {
-            //Make this E
-           // Debug.Log(currentLetter);
+            //Make this letter 5
+            LetterObj.GetComponent<TMPro.TextMeshPro>().text = _letter5;
+            // Debug.Log(currentLetter);
         }
         if (currentLetter == 5)
         {
-            //Make this F
-           // Debug.Log(currentLetter);
+            //Make this letter 6
+            LetterObj.GetComponent<TMPro.TextMeshPro>().text = _letter6;
+            // Debug.Log(currentLetter);
         }
     }
 
@@ -69,13 +76,13 @@ public class LetterPuzzle : MonoBehaviour
     }
     public void updateCurrentLetterDown()
     {
-        if (currentLetter < 0)
+        if (currentLetter > 0)
         {
             currentLetter--;
         }
         else
         {
-            currentLetter = 0;
+            currentLetter = 5;
         }
         
     }

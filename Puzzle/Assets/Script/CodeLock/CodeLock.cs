@@ -18,9 +18,12 @@ public class CodeLock : MonoBehaviour
     public AudioSource Fail;
     public AudioSource Success;
 
+    public GameObject showNumber;
+    //to show input password
     private void Start()
     {
         codeLength = code.Length;
+        
     }
 
     public void CheckCode()
@@ -35,6 +38,7 @@ public class CodeLock : MonoBehaviour
             Debug.Log("wrong code");
             Fail.Play();
             attemptedCode = "";
+            showNumber.GetComponent<TMPro.TextMeshPro>().text = attemptedCode;
             placeInCode = 0;
         }
     }
@@ -57,6 +61,7 @@ public class CodeLock : MonoBehaviour
         if (placeInCode <= codeLength)
         {
             attemptedCode += value;
+            showNumber.GetComponent<TMPro.TextMeshPro>().text = attemptedCode;
         }
 
         //check if the length of code match the code length, if it does it checks code then reset the attpempted code (the one player put in)
