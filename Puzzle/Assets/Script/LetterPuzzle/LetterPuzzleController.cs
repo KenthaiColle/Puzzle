@@ -28,7 +28,7 @@ public class LetterPuzzleController : MonoBehaviour
     public void CheckAnswer()
     {
         // 
-        if (_letter1.currentLetter == 2 && _letter2.currentLetter == 2 && _letter3.currentLetter == 1 && _letter4.currentLetter == 0 && _letter5.currentLetter == 1)
+        if (_letter1.currentLetter == 2 && _letter2.currentLetter == 2 && _letter3.currentLetter == 1 && _letter4.currentLetter == 5 && _letter5.currentLetter == 1)
         {
             var cubeRenderer = lightBulb.GetComponent<Renderer>();
             cubeRenderer.material.SetColor("_Color", Color.green);

@@ -112,6 +112,14 @@ public class MatchSystemController : MonoBehaviour
         _Left6.ResetColour();
     }
 
+    public void ResetButton()
+    {
+        ResetValues();
+        ResetAllMatchObj();
+        attemptedMatches = 0;
+        totalMatches = 0;
+    }
+
     // Update is called once per frame
     void Update()
     {

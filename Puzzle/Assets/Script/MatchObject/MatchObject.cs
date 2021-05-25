@@ -26,10 +26,18 @@ public class MatchObject : MonoBehaviour
         {
             var cubeRenderer = lightBulb.GetComponent<Renderer>();
             cubeRenderer.material.SetColor("_Color", Color.green);
-            Debug.Log("Win");
+            //Debug.Log("Win");
             //Set the light on to true for win condition
             _light.turnOn();
             success.Play();
+            _button1.finished = true;
+            _button2.finished = true;
+            _button3.finished = true;
+            _button4.finished = true;
+            _button5.finished = true;
+            _button6.finished = true;
+            _button7.finished = true;
+            _button8.finished = true;
         }
         else
         {
