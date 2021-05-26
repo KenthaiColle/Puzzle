@@ -14,6 +14,23 @@ public class OnOffButton : MonoBehaviour
     public Material Green;
     public Material Red;
 
+    //Press and unpress button sound
+    public AudioSource Pressed;
+    public AudioSource UnPressed;
+
+    //ButtonSpeed
+    float buttonSpeed = 0.1f;
+
+    //if the button is animating or not
+    public bool isAnimating;
+
+    //The Z value of original shape and pressed shape
+    public float OriginalZScale;
+    //Most pressed Value
+    public float PressedZScale;
+    //The more pressed value
+    public float PressedZScaleStationary;
+
     // Update is called once per frame
     void Update()
     {
@@ -32,7 +49,12 @@ public class OnOffButton : MonoBehaviour
                         on = true;
                         var cubeRenderer = button.GetComponent<Renderer>();
                         cubeRenderer.material = Green;
-                        Console.WriteLine("Done");
+
+                        Pressed.Play();
+                        StartCoroutine("PressAnimation");
+
+                        
+                        //Console.WriteLine("Done");
                     }
                     else
                     {
@@ -54,6 +76,10 @@ public class OnOffButton : MonoBehaviour
                     on = false;
                     var cubeRenderer = button.GetComponent<Renderer>();
                     cubeRenderer.material = Red;
+                    UnPressed.Play();
+                    StartCoroutine("UnPressAnimation");
+                    
+
                 }
                 else
                 {
@@ -68,6 +94,27 @@ public class OnOffButton : MonoBehaviour
         }
         
     }
+
+
+    private IEnumerator PressAnimation()
+    {
+        LeanTween.scaleZ(gameObject, PressedZScale, buttonSpeed);
+
+        yield return new WaitForSeconds(0.1f);
+
+        LeanTween.scaleZ(gameObject, PressedZScaleStationary, buttonSpeed);
+    }
+
+    private IEnumerator UnPressAnimation()
+    {
+        LeanTween.scaleZ(gameObject, PressedZScale, buttonSpeed);
+
+        yield return new WaitForSeconds(0.1f);
+
+        LeanTween.scaleZ(gameObject, OriginalZScale, buttonSpeed);
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
